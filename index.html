@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/csspopup.css">
+	<link rel="stylesheet" href="css/page.css">
+	<script src="js/jquery-1.6.4.min.js"></script>
+	<script src="js/jquery.csspopup.js"></script>
+	<title>CSS Popup</title>
+</head>
+<body>
+
+<button id="popup-1">Open popup API</button>
+<button id="popup-2">Open DOM element</button>
+<button id="popup-3">Open hidden form</button>
+<button id="popup-4">Custom close button</button>
+
+<script type="text/template" id="popup-content">
+<div class="test-content">
+	<h2>Some sample content</h2>
+	<p>This is a test content</p>
+</div>
+</script>
+
+<form class="test-form">
+	<table>
+		<tr>
+			<td class="label">Name:</td>
+			<td class="input"><input type="text" value="Tomas Mann"></td>
+		</tr>
+		<tr>
+			<td class="label">Email</td>
+			<td class="input"><input type="text" value="tomas@gmail.com"></td>
+		</tr>
+		<tr>
+			<td class="label"></td>
+			<td class="input"><input type="submit"></td>
+		</tr>
+	</table>
+</form>
+
+
+<script>
+	$('#popup-1').click(function() {
+		var content = $('#popup-content').html();
+		$.cssPopup(content);
+	});
+
+	$('#popup-2').click(function() {
+		$('<div>Some dynamic content</div>').cssPopup();
+	});
+
+	$('#popup-3').click(function() {
+		$('.test-form').cssPopup({
+			onShow: function(popup) {
+				popup.find('.test-form').show();
+			}
+		});
+	});
+
+	$('#popup-4').click(function() {
+		var content = '<h2>Custom close button</h2>' +
+					  '<p><a href="javascript:void(0)" class="csspopup-close">Close</a>';
+		$.cssPopup(content, {
+			closeBtn: false
+		});
+	});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+.csspopup-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	text-align: center;
+}
+/* Added for IE<9 compatibility */
+.csspopup-overlay-ie {
+	background: rgb(0, 0, 0);
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+.csspopup-overlay:after, .csspopup-valignfix {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
+	content: '';
+}
+.csspopup-popup {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	position: relative;
+	max-width: 80%;
+	padding: 15px;
+	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+	background: #FFF;
+	vertical-align: middle;
+	border-radius: 6px;
+}
+.csspopup-popup > .csspopup-close {
+	display: block;
+	position: absolute;
+	top: -15px;
+	right: -12px;
+	width: 12px;
+	height: 12px;
+	padding: 4px;
+	border: 4px solid #fff;
+	border-radius: 50%;
+	box-shadow: inset 0 2px 2px 2px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, .4);
+	cursor: pointer;
+	background: #555;
+	color: #FFF;
+	text-align: center;
+	font-size: 12px;
+	line-height: 12px;
+	text-decoration: none;
+	font-weight: bold
+}
+.csspopup-close:hover {}
+.csspopup-content {
+	text-align: left;
+}

@@ -1,0 +1,21 @@
+html {
+	min-height: 100%;
+}
+body {
+	min-height: 100%;
+	background: #fff;
+	font: 14px/125% Tahoma;
+}
+
+.test-content {
+	padding: 1px;
+	height: 150px;
+	width: 300px;
+	background-color: #EDEDED;
+}
+
+.test-form {display: none;}
+
+.csspopup-content h2 {
+	text-align: center;
+}
