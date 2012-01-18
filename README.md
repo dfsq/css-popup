@@ -54,6 +54,7 @@ var content = $('#popup-content').html();
 $.cssPopup(content, {
     closeBtn: false
 });
+```
 
 Close popup:
 
