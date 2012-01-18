@@ -43,13 +43,33 @@ $('<div class="toast">Settings saved</div>').cssPopup({
 
 Display arbitrary HTML content:
 
-```javascript
+```html
 <script type="text/template" id="popup-content">
     <!-- Some HTML here -->
     <a class="csspopup-close">Custom close button</a>
 </script>
+```
+```javascript
 var content = $('#popup-content').html();
 $.cssPopup(content, {
     closeBtn: false
 });
+
+Close popup:
+
+```javascript
+// Just close
+$.cssPopup.close();
+
+// Invoke callback on close
+$.cssPopup.close(function() {
+    // Do something
+});
+```
+
+At any moment you can change default options:
+
+```javascript
+$.cssPopup.defaults.onShow = function() { /* Global onShow callback */ };
+$.cssPopup('Hello, local onShow callback', function() { /* Local onShow callback */ });
 ```

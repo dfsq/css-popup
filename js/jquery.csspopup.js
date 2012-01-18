@@ -72,7 +72,7 @@
 	$.cssPopup.show = function(callback) {
 		overlay.show();
 		var cb = callback ? callback : options.onShow;
-		cb && cb(popup);
+		cb && cb.call(popup, popup);
 	};
 
 	/**
@@ -80,7 +80,7 @@
 	 */
 	$.cssPopup.close = function(callback) {
 		var cb = callback ? callback : options.onClose;
-		cb && cb(popup);
+		cb && cb.call(popup, popup);
 		overlay.remove();
 	};
 

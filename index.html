@@ -53,7 +53,7 @@
 	$('#popup-3').click(function() {
 		$('.test-form').cssPopup({
 			onShow: function(popup) {
-				popup.find('.test-form').show();
+				$(this).find('.test-form').show();
 			}
 		});
 	});
