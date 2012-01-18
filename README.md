@@ -74,3 +74,9 @@ At any moment you can change default options:
 $.cssPopup.defaults.onShow = function() { /* Global onShow callback */ };
 $.cssPopup('Hello, local onShow callback', function() { /* Local onShow callback */ });
 ```
+
+## Demo page
+
+[View demo page].
+
+[View demo page]: http://dfsq.info/projects/cssPopup
