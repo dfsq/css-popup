@@ -1,4 +1,4 @@
-# jQuery imageHalftone plugin
+# jQuery cssPopup plugin
 
 Basic lightweight popup plugin for jQuery. All popup positioning within the screen is done with CSS only. No offset or top calculations, only CSS.
 
